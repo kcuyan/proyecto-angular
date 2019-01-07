@@ -1,8 +1,8 @@
-<div class="container">
+<div class="container" *ngIf="project">
   <h2>{{title}}</h2>
 
     <div class="message success" *ngIf="status == 'success'">
-      El proyecto se ha creado Correctamente, puedes <a href="#">verlo aqui</a> 
+      El proyecto se ha creado Correctamente, puedes <a [routerLink]="['/proyecto', project._id]">verlo aqui</a> 
     </div>
 
     <div class="message failed" *ngIf="status == 'failed'">
@@ -46,6 +46,9 @@
 
       <p>
         <label for="image">Imagen del Proyecto</label>
+        <span class="imagen" *ngIf="project.image" style="float: none">
+            <img src="{{url+'get-image/'+project.image}}" style="width:300px"/>
+        </span><br>
         <input type="file" name="image" placeholder="Subir Imagen" (change)="fileChangeEvent($event)">
       </p>
 
