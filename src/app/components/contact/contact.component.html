@@ -1,3 +1,12 @@
-<p>
-  contact works CONTACT!
-</p>
+
+<div class="container">
+    <h1>Contacto</h1>
+
+    Tamaño del slider:
+    <input type="number" [(ngModel)]="widthSlider" (keyup.enter)="cargarSlider()">
+
+    <div *ngIf="anchuraToSlider"> 
+        <slider [anchura]="anchuraToSlider"></slider>
+    </div>
+    
+</div>
