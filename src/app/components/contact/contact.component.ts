@@ -19,12 +19,8 @@ export class ContactComponent implements OnInit {
 
   ngOnInit() {
     //alert(this.textos.nativeElement.textContent);
-    this.prueba = this.textos.nativeElement.textContent;
-
-    
-    
-
-   }
+    this.prueba = this.textos.nativeElement.textContent;  
+    }
 
   cargarSlider(){
     this.anchuraToSlider = this.widthSlider;
